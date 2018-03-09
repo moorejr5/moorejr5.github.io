@@ -8,11 +8,10 @@
 <body>
 
 <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" />
-<input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText('decksize','60');" />
+<input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText();" />
 <script>
-    function updateText(targetID,textvalue) {
+    function updateText() {
     	alert('hi');
-    	$('#'.targetID).val(textvalue);
     }
 </script>
 </body>
