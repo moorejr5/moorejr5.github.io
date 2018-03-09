@@ -9,6 +9,7 @@
 
 <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" />
 <input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText('decksize','60');" />
+<input type="button" name="deck_minus" id="deck_minus" value="Draw Card" onclick="updateText('decksize',document.getelementById('deck_minus').value - 1);" />
 <script>
     function updateText(targetID,textvalue) {
     	$('#'+targetID).val(textvalue);
