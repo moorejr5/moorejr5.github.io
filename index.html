@@ -8,9 +8,9 @@
 <body>
 
 <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" />
-<input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText();" />
+<input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText('decksize','60');" />
 <script>
-    function updateText() {
+    function updateText(targetID,textvalue) {
     	alert('hi');
     }
 </script>
