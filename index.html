@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>Tracking Totals</title>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <style>
+        input[type=button] {
+            padding:10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,7 +16,7 @@
     Cards Left in Deck<br/>
     <tr style="border:1px;">
         <td>
-            <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" />
+            <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" /><br/>
             <input type="button" name="deck_minus" id="deck_minus" value="Draw Card" onclick="updateText('decksize',document.getElementById('decksize').value - 1);" />
             <input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText('decksize','60');" />
         </td>
@@ -23,28 +28,37 @@
     Mana Stored<br/>
     <tr>
         <td>
+            <img src="colorless_mana.png" width="25" height="25" align="center"/>
+            <input title="colorless Mana" type="text" name="colorlessmana" id="colorlessmana" value="" /><br/>
+            <input type="button" name="colorless_plus" id="colorless_plus" value="Add" onclick="updateText('colorlessmana',+document.getElementById('colorlessmana').value + 1);" />
+            <input type="button" name="colorless_minus" id="colorless_minus" value="Minus" onclick="updateText('colorlessmana',+document.getElementById('colorlessmana').value - 1);" />
+            <input type="button" name="colorless_reset" id="colorless_reset" value="Reset" onclick="updateText('colorlessmana','');" />
+        </td>
+    </tr>
+    <tr>
+        <td>
             <img src="blue_mana.png" width="25" height="25" align="center"/>
-            <input title="Blue Mana" type="text" name="bluemana" id="bluemana" value="" />
-            <input type="button" name="blue_plus" id="blue_plus" value="+" onclick="updateText('bluemana',+document.getElementById('bluemana').value + 1);" />
-            <input type="button" name="blue_minus" id="blue_minus" value="-" onclick="updateText('bluemana',+document.getElementById('bluemana').value - 1);" />
+            <input title="Blue Mana" type="text" name="bluemana" id="bluemana" value="" /><br/>
+            <input type="button" name="blue_plus" id="blue_plus" value="Add" onclick="updateText('bluemana',+document.getElementById('bluemana').value + 1);" />
+            <input type="button" name="blue_minus" id="blue_minus" value="Minus" onclick="updateText('bluemana',+document.getElementById('bluemana').value - 1);" />
             <input type="button" name="blue_reset" id="blue_reset" value="Reset" onclick="updateText('bluemana','');" />
         </td>
     </tr>
     <tr>
         <td>
             <img src="red_mana.png" width="25" height="25" align="center"/>
-            <input title="Red Mana" type="text" name="redmana" id="redmana" value="" />
-            <input type="button" name="red_plus" id="red_plus" value="+" onclick="updateText('redmana',+document.getElementById('redmana').value + 1);" />
-            <input type="button" name="red_minus" id="red_minus" value="-" onclick="updateText('redmana',+document.getElementById('redmana').value - 1);" />
+            <input title="Red Mana" type="text" name="redmana" id="redmana" value="" /><br/>
+            <input type="button" name="red_plus" id="red_plus" value="Add" onclick="updateText('redmana',+document.getElementById('redmana').value + 1);" />
+            <input type="button" name="red_minus" id="red_minus" value="Minus" onclick="updateText('redmana',+document.getElementById('redmana').value - 1);" />
             <input type="button" name="red_reset" id="red_reset" value="Reset" onclick="updateText('redmana','');" />
         </td>
     </tr>
     <tr>
         <td>
             <img src="black_mana.png" width="25" height="25" align="center"/>
-            <input title="Black Mana" type="text" name="blackmana" id="blackmana" value="" />
-            <input type="button" name="black_plus" id="black_plus" value="+" onclick="updateText('blackmana',+document.getElementById('blackmana').value + 1);" />
-            <input type="button" name="black_minus" id="black_minus" value="-" onclick="updateText('blackmana',+document.getElementById('blackmana').value - 1);" />
+            <input title="Black Mana" type="text" name="blackmana" id="blackmana" value="" /><br/>
+            <input type="button" name="black_plus" id="black_plus" value="Add" onclick="updateText('blackmana',+document.getElementById('blackmana').value + 1);" />
+            <input type="button" name="black_minus" id="black_minus" value="Minus" onclick="updateText('blackmana',+document.getElementById('blackmana').value - 1);" />
             <input type="button" name="black_reset" id="black_reset" value="Reset" onclick="updateText('blackmana','');" />
         </td>
     </tr>
