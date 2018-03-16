@@ -14,18 +14,18 @@
 
 
 <table border="1">
-    Life Total<br/>
     <tr>
         <td>
+            Life Total<br/>
             <input title="life Mana" type="text" name="lifemana" id="lifemana" value="20" /><br/>
             <input type="button" name="life_plus" id="life_plus" value="Add" onclick="updateText('lifemana',+document.getElementById('lifemana').value + 1);" />
             <input type="button" name="life_minus" id="life_minus" value="Minus" onclick="updateText('lifemana',+document.getElementById('lifemana').value - 1);" />
             <input type="button" name="life_reset" id="life_reset" value="Reset" onclick="updateText('lifemana','20');" />
         </td>
     </tr>
-    Cards Left in Deck<br/>
     <tr style="border:1px;">
         <td>
+            Cards Left in Deck<br/>
             <input title='Deck Size' type="text" name="decksize" id="decksize" value="60" /><br/>
             <input type="button" name="deck_minus" id="deck_minus" value="Draw Card" onclick="updateText('decksize',document.getElementById('decksize').value - 1);" />
             <input type="button" name="deck_reset" id="deck_reset" value="Reset Deck" onclick="updateText('decksize','60');" />
